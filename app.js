@@ -14,6 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // Eğer gerekirse bodyParser ile JSON datayı alın
 app.use(express.static(path.join(__dirname, 'public')));
 app.set("views","public");
+app.use(express.static('public')); 
+
+
 
 const pool = new Pool({
     user: 'postgres',
